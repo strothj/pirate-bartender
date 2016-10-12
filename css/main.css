@@ -1,0 +1,58 @@
+@import 'https://fonts.googleapis.com/css?family=Rancho|Tangerine';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Rancho', cursive;
+  background-color: #CE150E;
+  color: #431F00;
+}
+
+.header__text {
+  font-family: 'Tangerine', cursive;
+  font-size: 6em;
+  text-align: center;
+  margin: 0;
+}
+
+.header__logo {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.main {
+  font-size: 1.6em;
+}
+
+.question-field {
+  border: none;
+}
+
+.question-field__question {
+  font-weight: bold;
+}
+
+.question-field__input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.submit-button {
+  border: none;
+  background: red;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
