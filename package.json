@@ -1,0 +1,23 @@
+{
+  "name": "pirate-bartender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strothj/pirate-bartender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strothj/pirate-bartender/issues"
+  },
+  "homepage": "https://github.com/strothj/pirate-bartender#readme",
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-es5": "^0.5.0"
+  }
+}
