@@ -13,12 +13,12 @@ var Question = function(question, ingredientType) {
   this.yesElement = this.element.find('#js-answer-' + this.ingredientType + '-yes');
 };
 
-Question.prototype.template = '<fieldset>' +
-  '<legend>${question}</legend>' +
+Question.prototype.template = '<fieldset class="question-field">' +
+  '<legend class="question-field__question">${question}</legend>' +
   '<label for="${id}-yes">Yes</label>' +
-  '<input checked id="${id}-yes" type="radio" name="${id}"' +
+  '<input class="question-field__input" checked id="${id}-yes" type="radio" name="${id}"' +
   '<label for="${id}-no">No</label>' +
-  '<input id="${id}-no" type="radio" name="${id}">' +
+  '<input class="question-field__input" id="${id}-no" type="radio" name="${id}">' +
 '</fieldset>';
 
 // Returns a boolean. Returns true if the user wants the ingredient type.
@@ -60,7 +60,7 @@ function createIngredients() {
 
 // Creates the user interface which asks for the user's drink preferences.
 var Questionnaire = function(formElement, questions) {
-  var submitElement = $('<buttom type="submit">Make my drink!</button>');
+  var submitElement = $('<buttom class="submit-button" type="submit">Make my drink!</button>');
   for (var i = 0; i < questions.length; i++) {
     formElement.append(questions[i].element);
   }
@@ -83,13 +83,37 @@ var Pantry = function(ingredients) {
   this.ingredients = ingredients;
 };
 
+// Returns a random ingredient of the specified type.
+Pantry.prototype.randomIngredient = function(type) {
+  var ingredients = this.ingredients[type];
+  return ingredients[Math.floor(Math.random() * (ingredients.length))];
+};
+
+var Bartender = function(pantry) {
+  this.pantry = pantry;
+};
+
+// Returns a string composed of a comma separated list of drink ingredients.
+Bartender.prototype.createDrink = function(preferences) {
+  var ingredients = [];
+  for (var i = 0; i < preferences.length; i++) {
+    ingredients.push(this.pantry.randomIngredient(preferences[i]));
+  }
+  return ingredients.map(function(item) {
+    return item.name;
+  }).join(', ');
+};
+
 $(function() {
   var questions = createQuestions();
   var ingredients = createIngredients();
   var pantry = new Pantry(ingredients);
+  var bartender = new Bartender(pantry);
   var questionnaire = new Questionnaire($('#js-form'), questions);
   questionnaire.submit = function(preferences) {
-    console.log(preferences);
-    // TODO: Ask bartender to create drink here.
+    var drink = bartender.createDrink(preferences);
+    $('#js-drink-header').removeClass('hidden');
+    $('#js-drink').text(drink);
+    $('html, body').scrollTop( $(document).height() );
   };
 });
