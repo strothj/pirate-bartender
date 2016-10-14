@@ -114,5 +114,6 @@ $(function() {
     var drink = bartender.createDrink(preferences);
     $('#js-drink-header').removeClass('hidden');
     $('#js-drink').text(drink);
+    $('html, body').scrollTop( $(document).height() );
   };
 });
