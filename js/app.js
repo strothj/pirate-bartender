@@ -1,5 +1,7 @@
 'use strict';
 
+var $ = require('jquery');
+
 // Returns an object which represents a user's preference for an ingredient.
 var Question = function(question, ingredientType) {
   this.ingredientType = ingredientType;
