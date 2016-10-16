@@ -12,6 +12,7 @@ body {
 
 .centered-wrapper {
   max-width: @max-page-width;
+  margin: 0 auto;
 }
 
 .header {
@@ -19,6 +20,7 @@ body {
   text-align: center;
   &__title {
     font-size: 2.2em;
+    margin-top: .3em;
     margin-bottom: .1em;
   }
 }
@@ -38,73 +40,22 @@ body {
   }
 
   &__input {
-    padding-left: 5px;
-    padding-right: 20px;
+    margin-left: 5px;
+    margin-right: 20px;
   }
 }
 
-// @app-bar-background-color: red;
-// body, html {
-//     margin: 0;
-//     padding: 0;
-// }
+.submit-button {
+  display: inline-block;
+  padding: .5em 2em;
+  background-color: red;
+  border: 1px solid black;
+}
 
-// .body {
-//   max-width: 960px;
-//   margin: 0 auto;
-//   font-family: 'Rancho', cursive;
-//   background-color: @background-color;
-//   color: #431F00;
-// }
+.drink {
+  font-size: 1.2em;
+}
 
-// @app-bar-height: 56px;
-// @app-logo-padding: { padding: 16px; };
-
-// .app-bar {
-//     position: relative;
-//     background-color: @app-bar-background-color;
-//     height: @app-bar-height;
-//     &__title {
-//         vertical-align: middle;
-//     }
-// }
-
-// .header__text {
-//   font-family: 'Tangerine', cursive;
-// //   font-size: 6em;
-//   text-align: center;
-//   margin: 0;
-// }
-
-// .header__logo {
-//   display: block;
-//   margin: 0 auto;
-//   width: 200px;
-// }
-
-// .main {
-//   font-size: 1.6em;
-// }
-
-// .question-field {
-//   border: none;
-// }
-
-// .question-field__question {
-//   font-weight: bold;
-// }
-
-// .question-field__input {
-//   margin-left: 20px;
-//   margin-right: 20px;
-// }
-
-// .submit-button {
-//   border: none;
-//   background: red;
-//   padding: 20px;
-// }
-
-// .hidden {
-//   display: none;
-// }
+.hidden {
+  display: none;
+}
