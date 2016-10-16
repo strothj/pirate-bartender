@@ -2,50 +2,89 @@
 @import 'https://fonts.googleapis.com/css?family=Rancho|Tangerine';
 @import 'box-sizing.less';
 
-.body {
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: 'Rancho', cursive;
-  background-color: #CE150E;
-  color: #431F00;
+@dark-red: #CE150E;
+@background-color: @dark-red;
+@max-page-width: 1000px;
+
+.center-background-color {
+    position: absolute;
+    width: @max-page-width;
+    max-width: @max-page-width;
+    height: 100vh;
+    background-color: @background-color;
+    z-index: -1;
+    margin: 0 auto;
 }
 
-.header__text {
-  font-family: 'Tangerine', cursive;
-  font-size: 6em;
-  text-align: center;
-  margin: 0;
-}
+// .page-wrapper {
+//     max-width: 1000px;
+//     min-height: 100vh;
+//     margin: 0 auto;
+// }
 
-.header__logo {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-}
 
-.main {
-  font-size: 1.6em;
-}
+// @app-bar-background-color: red;
+// body, html {
+//     margin: 0;
+//     padding: 0;
+// }
 
-.question-field {
-  border: none;
-}
+// .body {
+//   max-width: 960px;
+//   margin: 0 auto;
+//   font-family: 'Rancho', cursive;
+//   background-color: @background-color;
+//   color: #431F00;
+// }
 
-.question-field__question {
-  font-weight: bold;
-}
+// @app-bar-height: 56px;
+// @app-logo-padding: { padding: 16px; };
 
-.question-field__input {
-  margin-left: 20px;
-  margin-right: 20px;
-}
+// .app-bar {
+//     position: relative;
+//     background-color: @app-bar-background-color;
+//     height: @app-bar-height;
+//     &__title {
+//         vertical-align: middle;
+//     }
+// }
 
-.submit-button {
-  border: none;
-  background: red;
-  padding: 20px;
-}
+// .header__text {
+//   font-family: 'Tangerine', cursive;
+// //   font-size: 6em;
+//   text-align: center;
+//   margin: 0;
+// }
 
-.hidden {
-  display: none;
-}
+// .header__logo {
+//   display: block;
+//   margin: 0 auto;
+//   width: 200px;
+// }
+
+// .main {
+//   font-size: 1.6em;
+// }
+
+// .question-field {
+//   border: none;
+// }
+
+// .question-field__question {
+//   font-weight: bold;
+// }
+
+// .question-field__input {
+//   margin-left: 20px;
+//   margin-right: 20px;
+// }
+
+// .submit-button {
+//   border: none;
+//   background: red;
+//   padding: 20px;
+// }
+
+// .hidden {
+//   display: none;
+// }
