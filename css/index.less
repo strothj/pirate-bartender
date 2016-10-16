@@ -29,6 +29,23 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   font-family: 'Rancho', cursive;
+  
+  &__logo {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    &__logo, &__questionnaire {
+      display: block;
+      float: left;
+      width: 50%;  
+    }
+
+    &__logo img {
+      width: 100%;
+      padding: 20px;
+    }
+  }
 }
 
 .question-field {
