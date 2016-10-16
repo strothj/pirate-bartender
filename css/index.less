@@ -6,22 +6,42 @@
 @background-color: @dark-red;
 @max-page-width: 1000px;
 
-.center-background-color {
-    position: absolute;
-    width: @max-page-width;
-    max-width: @max-page-width;
-    height: 100vh;
-    background-color: @background-color;
-    z-index: -1;
-    margin: 0 auto;
+body {
+  background-color: @background-color;
 }
 
-// .page-wrapper {
-//     max-width: 1000px;
-//     min-height: 100vh;
-//     margin: 0 auto;
-// }
+.centered-wrapper {
+  max-width: @max-page-width;
+}
 
+.header {
+  font-family: 'Tangerine', cursive;
+  text-align: center;
+  &__title {
+    font-size: 2.2em;
+    margin-bottom: .1em;
+  }
+}
+
+.main-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Rancho', cursive;
+}
+
+.question-field {
+  border: 0;
+  padding-left: 0;
+
+  &__question {
+    font-size: 1.3em;
+  }
+
+  &__input {
+    padding-left: 5px;
+    padding-right: 20px;
+  }
+}
 
 // @app-bar-background-color: red;
 // body, html {
