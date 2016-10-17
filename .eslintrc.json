@@ -1,20 +1,22 @@
 {
     "env": {
         "browser": true,
-        "jquery": true
+        "jquery": true,
+        "commonjs": true,
+        "es6": true
     },
     "parserOptions": {
         "sourceType": "script"
     },
-    "rules": {
-        "no-const-assign": "warn",
-        "no-this-before-super": "warn",
-        "no-undef": "warn",
-        "no-unreachable": "warn",
-        "no-unused-vars": "warn",
-        "constructor-super": "warn",
-        "valid-typeof": "warn",
-        "func-names": "off"
-    },
-    "extends": "eslint-config-es5"
+    // "rules": {
+    //     "no-const-assign": "warn",
+    //     "no-this-before-super": "warn",
+    //     "no-undef": "warn",
+    //     "no-unreachable": "warn",
+    //     "no-unused-vars": "warn",
+    //     "constructor-super": "warn",
+    //     "valid-typeof": "warn",
+    //     "func-names": "off"
+    // },
+    "extends": "airbnb"
 }

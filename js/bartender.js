@@ -1,18 +1,16 @@
-'use strict';
-
-var Bartender = function(pantry) {
-  this.pantry = pantry;
-};
-
-// Returns a comma separated list of drink ingredients.
-Bartender.prototype.createDrink = function(preferences) {
-  var ingredients = [];
-  for (var i = 0; i < preferences.length; i++) {
-    ingredients.push(this.pantry.randomIngredient(preferences[i]));
+class Bartender {
+  constructor(pantry) {
+    this.pantry = pantry;
   }
-  return ingredients.map(function(item) {
-    return item.name;
-  }).join(', ');
-};
+
+  // Returns a comma separated list of drink ingredients.
+  createDrink(preferences) {
+    const ingredients = [];
+    for (const ingredientType of preferences) {
+      ingredients.push(this.pantry.randomIngredient(ingredientType));
+    }
+    return ingredients.map(item => item.name).join(', ');
+  }
+}
 
 module.exports = Bartender;
