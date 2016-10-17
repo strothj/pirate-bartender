@@ -5,6 +5,7 @@
 @dark-red: #CE150E;
 @background-color: @dark-red;
 @max-page-width: 1000px;
+@show-logo-width: 550px; // mobile landscape or above
 
 body {
   background-color: @background-color;
@@ -30,15 +31,25 @@ body {
   padding-right: 20px;
   font-family: 'Rancho', cursive;
   
+  // Hide logo on mobile
   &__logo {
     display: none;
   }
 
-  @media only screen and (min-width: 1000px) {
+  // Show pirate logo on landscape or tablet/desktop
+  .show-logo(@min-width: @show-logo-width);
+}
+
+.show-logo(@min-width) {
+  @media only screen and (min-width: @min-width) {
     &__logo, &__questionnaire {
       display: block;
       float: left;
       width: 50%;  
+    }
+
+    &__questionnaire::after {
+      clear: both;
     }
 
     &__logo img {
